@@ -1,0 +1,38 @@
+{
+  "Development": {
+    "Start Dev Server (Vercel)": {
+      "value": "npm run dev",
+      "source": "package.json -> scripts.dev",
+      "notes": "Uses Vercel CLI to run frontend and serverless functions locally."
+    },
+    "Startup Script": {
+      "value": "./startup.sh",
+      "source": "startup.sh",
+      "notes": "Optional convenience script to check prerequisites and run 'vercel dev'."
+    }
+  },
+  "Build": {
+    "Build Production Assets": {
+      "value": "npm run build",
+      "source": "package.json -> scripts.build",
+      "notes": "Uses Vite to build optimized frontend assets into the 'dist/' directory."
+    }
+  },
+  "Quality Checks": {
+    "Run Linters": {
+      "value": "npm run lint",
+      "source": "package.json -> scripts.lint",
+      "notes": "Runs ESLint based on .eslintrc.cjs configuration."
+    },
+    "Check Formatting": {
+      "value": "npm run format",
+      "source": "package.json -> scripts.format",
+      "notes": "Runs Prettier check based on .prettierrc configuration."
+    },
+    "Run Tests": {
+      "value": "npm run test",
+      "source": "package.json -> scripts.test",
+      "notes": "Runs Vitest test suites."
+    }
+  }
+}
