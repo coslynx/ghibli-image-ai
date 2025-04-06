@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Required because this tsconfig is referenced.
+    "composite": true,
+    // Override module settings for Node.js (Vercel Functions use ESM)
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
+    // Other options like 'strict', 'target', 'lib' are inherited from the base tsconfig.json
+  },
+  "include": [
+    "api/**/*.ts", // Target the serverless functions
+    "vite.config.js", // Include Vite config for context, even if JS
+    "vitest.config.ts" // Include Vitest config if present
+  ],
+  "exclude": [
+    "node_modules" // Standard exclusion
+  ]
+}
