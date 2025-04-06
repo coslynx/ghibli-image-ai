@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Build Options */
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "isolatedModules": true,
+
+    /* Module Resolution */
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    // "paths": {}, /* Define path aliases here if needed in the future */
+
+    /* JavaScript Support */
+    "allowJs": true, // Allow JavaScript files to be included in the compilation process
+
+    /* Interoperability Constraints */
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "forceConsistentCasingInFileNames": true, // Ensure file references use consistent casing
+
+    /* Type Checking */
+    "strict": true, // Enable all strict type-checking options
+    "noUnusedLocals": true, // Report errors on unused local variables
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+
+    /* Completeness */
+    "skipLibCheck": true // Skip type checking of declaration files (*.d.ts)
+  },
+  "include": ["src"], // Specifies the files TypeScript should check
+  "references": [{ "path": "./tsconfig.node.json" }] // Reference the Node-specific config (important for editor support of config files and serverless functions)
+}
